@@ -3,7 +3,7 @@ import document from './document'
 import folder from './folder'
 
 const instance = {
-  version: '1.0.2',
+  version: '1.0.1',
   token: null
 }
 instance.document = document(instance)
