@@ -1,0 +1,4 @@
+"mutation {
+  deleteDocument(id: \"$documentId\")
+}",
+"variables": $variables
