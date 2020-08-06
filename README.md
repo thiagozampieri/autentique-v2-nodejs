@@ -1,13 +1,6 @@
 #### <span style="text-align: center">AUTENTIQUE Api v2</span>
-[![Latest Stable Version](https://img.shields.io/packagist/v/thiagozampieri/autentique-v2-nodejs)](https://packagist.org/packages/thiagozampieri/autentique-v2-nodejs)
-[![Total Downloads](https://poser.pugx.org/thiagozampieri/autentique-v2-nodejs/downloads)](https://packagist.org/packages/thiagozampieri/autentique-v2-nodejs)
-[![Build Status](https://travis-ci.org/thiagozampieri/autentique-v2-nodejs.svg?branch=master)](https://travis-ci.org/thiagozampieri/autentique-v2-nodejs)
-[![codecov](https://codecov.io/gh/thiagozampieri/autentique-v2-nodejs/branch/master/graph/badge.svg)](https://codecov.io/gh/thiagozampieri/autentique-v2-nodejs)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thiagozampieri/autentique-v2-nodejs/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/thiagozampieri/autentique-v2-nodejs/?branch=master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/thiagozampieri/autentique-v2-nodejs/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-[![License](https://poser.pugx.org/thiagozampieri/autentique-v2-nodejs/license)](https://packagist.org/packages/thiagozampieri/autentique-v2-nodejs)
 # 🚀 Usage
-<pre>yarn add thiagozampieri/autentique-v2-nodejs</pre>
+<pre>npm i autentique-v2-nodejs</pre>
 
 **Set file .env**
 <pre>
