@@ -1,6 +1,6 @@
 {
   "name": "autentique-v2-nodejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API Autentique V2",
   "main": "src/index.js",
   "repository": "https://github.com/thiagozampieri/autentique-v2-nodejs.git",
@@ -16,6 +16,7 @@
   "bin": {
     "autentique-v2-nodejs": "lib/install.js"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "start": "babel-node ./src/index.js",
     "test": "babel-node ./tests/test.js"
