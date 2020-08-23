@@ -1,17 +1,16 @@
 'use strict'
 import fs from 'fs'
-import { AUTENTIQUE_DEV_MODE } from 'babel-dotenv'
 import Api from '../common/Api'
 import utils from '../common/utils'
 
-const deleteById = async ({ token }, { folderId }) => {
+const deleteById = async ({ token, sandbox = false }, { folderId }) => {
   try {
     const filename = `${__dirname}/../resources/folders/deleteById.graphql`
     const operations = fs.readFileSync(filename)
       .toString()
       .replace(/[\n\r]/gi, '')
       .replace('$folderId', folderId)
-      .replace('$sandbox', AUTENTIQUE_DEV_MODE.toString())
+      .replace('$sandbox', sandbox.toString())
 
     const formData = (utils.query(operations))
     const response = await Api(token).post('/graphql', formData, {

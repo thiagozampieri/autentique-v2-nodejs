@@ -1,6 +1,6 @@
 {
   "name": "autentique-v2-nodejs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "API Autentique V2",
   "main": "src/index.js",
   "repository": "https://github.com/thiagozampieri/autentique-v2-nodejs.git",
@@ -10,8 +10,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "babel-plugin-dotenv": "^0.1.1",
-    "form-data": "^3.0.0",
-    "request": "^2.88.2"
+    "form-data": "^3.0.0"
   },
   "bin": {
     "autentique-v2-nodejs": "lib/install.js"

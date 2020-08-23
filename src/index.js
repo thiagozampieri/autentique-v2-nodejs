@@ -4,7 +4,8 @@ import folder from './folder'
 
 const instance = {
   version: '1.0.2',
-  token: null
+  token: null,
+  sandbox: false
 }
 instance.document = document(instance)
 instance.folder = folder(instance)

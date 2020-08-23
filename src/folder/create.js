@@ -1,10 +1,9 @@
 'use strict'
 import fs from 'fs'
-import { AUTENTIQUE_DEV_MODE } from 'babel-dotenv'
 import Api from '../common/Api'
 import utils from '../common/utils'
 
-const create = async ({ token }, { folder }) => {
+const create = async ({ token, sandbox = false }, { folder }) => {
   try {
     const variables = {
       folder
@@ -15,7 +14,7 @@ const create = async ({ token }, { folder }) => {
       .toString()
       .replace(/[\n\r]/gi, '')
       .replace('$variables', JSON.stringify(variables))
-      .replace('$sandbox', AUTENTIQUE_DEV_MODE.toString())
+      .replace('$sandbox', sandbox.toString())
 
     const formData = (utils.query(operations))
     const response = await Api(token).post('/graphql', formData, {

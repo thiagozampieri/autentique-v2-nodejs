@@ -1,13 +1,13 @@
 'use strict'
 import fs from 'fs'
-import request from 'request'
+import axios from 'axios'
+import path from 'path'
 import FormData from 'form-data'
-import { AUTENTIQUE_DEV_MODE } from 'babel-dotenv'
 import Api from '../common/Api'
 import utils from '../common/utils'
 
-const create = async ({ token }, { document, signers, file }) => {
-  try {
+const create = async ({ token, sandbox = false }, { document, signers, file }) => {
+  try {    
     const variables = {
       document,
       signers,
@@ -19,12 +19,18 @@ const create = async ({ token }, { document, signers, file }) => {
       .toString()
       .replace(/[\n\r]/gi, '')
       .replace('$variables', JSON.stringify(variables))
-      .replace('$sandbox', AUTENTIQUE_DEV_MODE.toString())
+      .replace('$sandbox', sandbox.toString())
 
+    const buffer = await axios.get(file, { responseType: 'arraybuffer' })
+    
     const formData = new FormData()
     formData.append('operations', utils.query(operations))
     formData.append('map', '{"file": ["variables.file"]}')
-    formData.append('file', request(file))
+    formData.append('file', Buffer.from(buffer.data), {
+      filename: path.basename(file),
+      contentType: 'application/octet-stream',
+      mimeType: 'application/octet-stream'
+    })
     
     const response = await Api(token).post('/graphql', formData, {
       processData: false,
