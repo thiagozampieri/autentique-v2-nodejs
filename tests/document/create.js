@@ -1,7 +1,7 @@
 'use strict'
 export default async (autentique) => {  
   const attributes = { 
-    document: { name: 'modelo de contrato - atualizado' },
+    document: { name: 'modelo de contrato - atualizado v2' },
     signers: [{ 
       email: 'thiago.zampieri@gmail.com',
       action: 'SIGN'

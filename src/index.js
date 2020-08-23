@@ -1,9 +1,10 @@
 'use strict'
 import document from './document'
 import folder from './folder'
+import pjson from '../package.json'
 
 const instance = {
-  version: '1.0.2',
+  version: pjson.version,
   token: null,
   sandbox: false
 }

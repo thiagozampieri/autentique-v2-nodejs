@@ -1,8 +1,8 @@
 {
   "name": "autentique-v2-nodejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "API Autentique V2",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/thiagozampieri/autentique-v2-nodejs.git",
   "author": "Thiago Zampieri <thiago.zampieri@gmail.com>",
   "license": "MIT",
@@ -17,10 +17,13 @@
   },
   "scripts": {
     "start": "babel-node ./src/index.js",
-    "test": "babel-node ./tests/test.js"
+    "test": "babel-node ./tests/test.js",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.0"
