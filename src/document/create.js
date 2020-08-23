@@ -36,6 +36,7 @@ const create = async ({ token, sandbox = false }, { document, signers, file }) =
       processData: false,
       withCredentials: true,
       cache: false,
+      timeout: 180000,
       headers: {
         ...formData.getHeaders(),
         enctype: 'multipart/form-data',
