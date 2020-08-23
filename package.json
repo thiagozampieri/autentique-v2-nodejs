@@ -1,6 +1,6 @@
 {
   "name": "autentique-v2-nodejs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "API Autentique V2",
   "main": "dist/index.js",
   "repository": "https://github.com/thiagozampieri/autentique-v2-nodejs.git",
@@ -12,16 +12,17 @@
     "babel-plugin-dotenv": "^0.1.1",
     "form-data": "^3.0.0"
   },
-  "files": [ "dist", "lib" ],
+  "files": [ "dist", "lib", "src/resources/*" ],
   "bin": {
     "autentique-v2-nodejs": "lib/install.js"
   },
   "scripts": {
     "start": "babel-node ./src/index.js",
     "test": "babel-node ./tests/test.js",
-    "build": "babel src --out-dir dist",
-    "clean": "rm -rf dist"
-    
+    "build": "babel src --out-dir dist --copy-files",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
