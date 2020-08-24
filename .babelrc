@@ -1,7 +1,17 @@
 {
-  "presets": ["@babel/env"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
+  ],
   "plugins": [
     "@babel/proposal-class-properties",
+    "@babel/plugin-transform-runtime",
     ["babel-plugin-dotenv", {
       "replacedModuleName": "babel-dotenv"
    }]
