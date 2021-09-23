@@ -14,7 +14,10 @@ AUTENTIQUE_DEV_MODE=true || false
 
 **Import library** `import autentique from from 'thiagozampieri\autentique-v2-nodejs`
 
-**Instance** `autentique.token = AUTENTIQUE_TOKEN`
+**Instance**
+```javascript
+autentique.token = AUTENTIQUE_TOKEN
+```
 
 #### 1 - Listar todos os Documentos
 ```javascript
