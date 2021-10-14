@@ -10,15 +10,15 @@ AUTENTIQUE_DEV_MODE=true || false
 # IF TRUE, DOCUMENT CREATE IN MODE SANDBOX
 </pre>
 
-**Import library** `import autentique from from 'thiagozampieri\autentique-v2-nodejs`
+**Import library** `import autentique from 'autentique-v2-nodejs`
 
-**Instance** <pre>autentique.token = AUTENTIQUE_TOKEN</pre>
+**Instance** <pre>autentique.default.token = AUTENTIQUE_TOKEN</pre>
 
 #### 1 - Listar todos os Documentos
-<pre>autentique.document.listAll(page); // if not isset page is equal 1</pre>
+<pre>autentique.default.document.listAll(page); // if not isset page is equal 1</pre>
 
 #### 2 - Listar um Documento
-<pre>autentique.document.listById(documentId);</pre>
+<pre>autentique.default.document.listById(documentId);</pre>
 
 #### 3 - Criar um Documento
 <pre>attributes = {
@@ -54,11 +54,11 @@ AUTENTIQUE_DEV_MODE=true || false
         file: 'https://www.documento.com.br/Arquivo.pdf'
     };
  
- autentique.document.create(attributes);
+ autentique.default.document.create(attributes);
  </pre>
 
 #### 4 - Assinar um Documento
-<pre>autentique.document.signById(documentId);</pre>
+<pre>autentique.default.document.signById(documentId);</pre>
 
 #### 5 - Deletar um Documento
-<pre>autentique.document.deleteById(documentId);</pre>
+<pre>autentique.default.document.deleteById(documentId);</pre>
