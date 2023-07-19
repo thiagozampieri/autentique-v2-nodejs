@@ -1,18 +1,18 @@
 #### <span style="text-align: center">AUTENTIQUE Api v2</span>
 # 🚀 Usage
 ```shell
-npm i autentique-v2-nodejs
+npm i @thiago.zampieri/autentique-v2-nodejs
 ```
 
 **Set file .env**
 ```shell
-AUTENTIQUE_URL=https://api.autentique.com.br/v2/graphql
+AUTENTIQUE_URL=https://api.autentique.com.br/v2
 AUTENTIQUE_TOKEN=YOURTOKEN
 AUTENTIQUE_DEV_MODE=true || false
 # IF TRUE, DOCUMENT CREATE IN MODE SANDBOX
 ```
 
-**Import library** `import autentique from from 'thiagozampieri\autentique-v2-nodejs`
+**Import library** `import autentique from from '@thiago.zampieri/autentique-v2-nodejs`
 
 **Instance**
 ```javascript

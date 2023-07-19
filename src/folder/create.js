@@ -28,7 +28,7 @@ const create = async ({ token, sandbox = false }, { folder }) => {
 
     return response && response.data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }  
 }
 

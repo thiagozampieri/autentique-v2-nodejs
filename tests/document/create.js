@@ -6,7 +6,8 @@ export default async (autentique) => {
       email: 'thiago.zampieri@gmail.com',
       action: 'SIGN'
     }],
-    file: 'https://cptstatic.s3.amazonaws.com/pdf/cpt/codigo-civil/modelo-contrato-prestacao-servicos-cursos-cpt.pdf'
+    filename: 'modelo de contrato - atualizado v2.pdf',
+    fileUrl: 'https://cptstatic.s3.amazonaws.com/pdf/cpt/codigo-civil/modelo-contrato-prestacao-servicos-cursos-cpt.pdf'
   }
   
   const response = await autentique.document.create(attributes) 

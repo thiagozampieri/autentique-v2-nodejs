@@ -25,7 +25,7 @@ const moveDocumentById = async ({ token, sandbox = false }, { folderId, document
 
     return response && response.data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }  
 }
 

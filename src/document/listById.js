@@ -24,7 +24,7 @@ const listById = async ({ token, sandbox = false }, { documentId }) => {
 
     return response && response.data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }  
 }
 
