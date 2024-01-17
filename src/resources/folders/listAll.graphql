@@ -1,5 +1,5 @@
 "query { 
-  folders(limit: 60, page: 1) { 
+  folders(limit: 60, page: 1, showSandbox: $sandbox) { 
     total 
     data { 
       id
