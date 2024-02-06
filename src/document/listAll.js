@@ -3,13 +3,14 @@ import fs from 'fs'
 import Api from '../common/Api'
 import utils from '../common/utils'
 
-const listAll = async ({ token, sandbox = false }, { page = 1 }) => {
+const listAll = async ({ token, sandbox = false }, { page = 1, limit = 60 }) => {
   try {
     const filename = `${__dirname}/../resources/documents/listAll.graphql`
     const operations = fs.readFileSync(filename)
       .toString()
       .replace(/[\n\r]/gi, '')
       .replace('$page', page)
+      .replace('$limit', limit || 60)
       .replace('$sandbox', sandbox.toString())
 
     const formData = (utils.query(operations))
