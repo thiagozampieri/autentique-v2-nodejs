@@ -1,0 +1,8 @@
+"query { 
+  folder(id: \"$folderId\") { 
+    id
+    name
+    type
+    created_at 
+  }
+}"

@@ -1,5 +1,5 @@
-"mutation CreateDocumentMutation($document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload!) {
-    createDocument(sandbox: $sandbox, document: $document, signers: $signers, file: $file) {
+"mutation CreateDocumentMutation($document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload!, $organizationId: Int, $folderId: UUID) {
+    createDocument(sandbox: $sandbox, document: $document, signers: $signers, file: $file, organization_id: $organizationId, folder_id: $folderId) {
         id
         name
         refusable

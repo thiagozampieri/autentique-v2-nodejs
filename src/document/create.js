@@ -5,7 +5,7 @@ import FormData from 'form-data'
 import Api from '../common/Api'
 import utils from '../common/utils'
 
-const create = async ({ token, sandbox = false }, { document, signers, filename: originalFilename, file, fileUrl }) => {
+const create = async ({ token, sandbox = false }, { document, signers, filename: originalFilename, file, fileUrl, organizationId, folderId }) => {
   try {    
     const variables = {
       document: {
@@ -14,6 +14,8 @@ const create = async ({ token, sandbox = false }, { document, signers, filename:
       },
       signers,
       file: null,
+      organizationId,
+      folderId,
     }
 
     const filename = `${__dirname}/../resources/documents/create.graphql`
